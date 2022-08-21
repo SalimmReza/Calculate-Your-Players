@@ -19,13 +19,14 @@
 
     <section class="container">
         <div class="d-flex">
-            <div id="players-card" class="row">
+            <div id="" class="row">
                 <div class="col-4 my-3">
                     <div class="card" style="width: 20rem; height: 350px;">
-                        <img src="images/masrafi.png" class="card-img-top" alt="..." style="height: 200px;">
+                        <img src="images/masrafi.png" class="card-img-top players-card" alt="..."
+                            style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Masrafi</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary" onclick="addToCart(this)">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -35,7 +36,7 @@
                         <img src="images/dhoni.png" class="card-img-top" alt="..." style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Dhoni</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary players-card" onclick="addToCart(this)">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -45,7 +46,7 @@
                         <img src="images/sakib.png" class="card-img-top" alt="..." style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Sakib</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary players-card" onclick="addToCart(this)">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -54,7 +55,7 @@
                         <img src="images/liton.png" class="card-img-top" alt="..." style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Liton</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary players-card" onclick="addToCart(this)">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -63,7 +64,7 @@
                         <img src="images/kholi.png" class="card-img-top" alt="..." style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Kholi</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary players-card" onclick="addToCart(this)">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -72,7 +73,16 @@
                         <img src="images/tamim.png" class="card-img-top" alt="..." style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Tamin</h5>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary players-card" onclick="addToCart(this)">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 my-3">
+                    <div class="card" style="width: 20rem; height: 350px;">
+                        <img src="images/tamim.png" class="card-img-top" alt="..." style="height: 200px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Tamin</h5>
+                            <a href="#" class="btn btn-primary players-card" onclick="addToCart(this)">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -85,6 +95,7 @@
                     <div class="col-12 my-3">
                         <div id="select-card" class="card" style="width: 20rem; height: 350px;">
                             <div>
+
                                 <p>Selected -V</p>
                                 <div>
                                     <table class=" w-full">
@@ -106,8 +117,8 @@
                     <div class="col-12 my-3">
                         <div class="card" style="width: 20rem; height: 350px;">
                             <h4>Budget</h4>
-                            <p>Per Player: <input type="number"></p>
-                            <button class="btn btn-primary">Calculate</button>
+                            <p>Per Player: <input type="number" id="per-player-field"></p>
+                            <button id="calculate-btn" class="btn btn-primary">Calculate</button>
                             <p>Player Expenses: $ <span>5000</span></p>
                             <p>Manager: <input type="number"></p>
                             <p>Coach: <input type="number"></p>
