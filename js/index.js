@@ -1,26 +1,4 @@
 
-
-// // click button card
-// function addToCart(element) {
-//     const player = element.parentNode.children[0].innerText;
-//     const button = element.parentNode.children[1];
-//     if (button === element) {
-//         button.style.display = 'none';
-
-//     }
-
-//     const pd = {
-//         pdName: player
-//     }
-
-//     cart.push(pd);
-
-//     displayProduct();
-
-
-// };
-
-
 cart = [];
 
 //player details top card
@@ -90,11 +68,36 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const expenseText = parseFloat(expenseString);
     playerExpense.innerText = totalPlayerAmount;
 
+    document.getElementById('total').addEventListener('click', function () {
+
+        const managerField = document.getElementById('manager');
+        const managerTextString = managerField.value;
+        const managerText = parseFloat(managerTextString);
 
 
+        const coachField = document.getElementById('coach');
+        const coachTextString = coachField.value;
+        const coachText = parseFloat(coachTextString);
+
+
+
+        //set
+        const totalText = document.getElementById('total-text');
+        const totalTextString = totalText.innerText;
+        const totaltextValue = parseFloat(totalTextString);
+        //calculation 
+        totalValue = managerText + coachText + totalPlayerAmount;
+        totalText.innerText = totalValue;
+
+
+    });
 
 
 });
+
+
+
+
 
 
 
