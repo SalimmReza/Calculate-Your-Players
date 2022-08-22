@@ -26,7 +26,7 @@
                             style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Masrafi</h5>
-                            <a href="#" class="btn btn-primary" onclick="addToCart(this)">Go somewhere</a>
+                            <a href="#" class="btn btn-primary" name="chk" onclick="addToCart(this)">Go somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,8 @@
                         <img src="images/dhoni.png" class="card-img-top" alt="..." style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Dhoni</h5>
-                            <a href="#" class="btn btn-primary players-card" onclick="addToCart(this)">Go somewhere</a>
+                            <a href="#" class="btn btn-primary players-card" name="chk" onclick="addToCart(this)">Go
+                                somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -46,7 +47,8 @@
                         <img src="images/sakib.png" class="card-img-top" alt="..." style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Sakib</h5>
-                            <a href="#" class="btn btn-primary players-card" onclick="addToCart(this)">Go somewhere</a>
+                            <a href="#" class="btn btn-primary players-card" name="chk" onclick="addToCart(this)">Go
+                                somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +57,8 @@
                         <img src="images/liton.png" class="card-img-top" alt="..." style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Liton</h5>
-                            <a href="#" class="btn btn-primary players-card" onclick="addToCart(this)">Go somewhere</a>
+                            <a href="#" class="btn btn-primary players-card" name="chk" onclick="addToCart(this)">Go
+                                somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -64,7 +67,8 @@
                         <img src="images/kholi.png" class="card-img-top" alt="..." style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Kholi</h5>
-                            <a href="#" class="btn btn-primary players-card" onclick="addToCart(this)">Go somewhere</a>
+                            <a href="#" class="btn btn-primary players-card" name="chk" onclick="addToCart(this)">Go
+                                somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -73,7 +77,8 @@
                         <img src="images/tamim.png" class="card-img-top" alt="..." style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Tamin</h5>
-                            <a href="#" class="btn btn-primary players-card" onclick="addToCart(this)">Go somewhere</a>
+                            <a href="#" class="btn btn-primary players-card" name="chk" onclick="addToCart(this)">Go
+                                somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -82,7 +87,8 @@
                         <img src="images/tamim.png" class="card-img-top" alt="..." style="height: 200px;">
                         <div class="card-body">
                             <h5 class="card-title">Tamin</h5>
-                            <a href="#" class="btn btn-primary players-card" onclick="addToCart(this)">Go somewhere</a>
+                            <a href="#" class="btn btn-primary players-card" name="chk" onclick="addToCart(this)">Go
+                                somewhere</a>
                         </div>
                     </div>
                 </div>
@@ -99,13 +105,13 @@
                                 <p>Selected -V</p>
                                 <div>
                                     <table class=" w-full">
-                                        <tbody id="players-name">
+                                        <div id="players-name">
                                             <!-- <tr>
                                             <th>1</th>
                                             <td>Cy Ganderton</td>
                                             <td>Quality Control Specialist</td>
                                           </tr> -->
-                                        </tbody>
+                                        </div>
                                     </table>
                                 </div>
                             </div>
@@ -118,12 +124,12 @@
                         <div class="card" style="width: 20rem; height: 350px;">
                             <h4>Budget</h4>
                             <p>Per Player: <input type="number" id="per-player-field"></p>
-                            <button id="calculate-btn" class="btn btn-primary">Calculate</button>
-                            <p>Player Expenses: $ <span>5000</span></p>
-                            <p>Manager: <input type="number"></p>
-                            <p>Coach: <input type="number"></p>
-                            <button id="" class="btn btn-primary">Calculate</button>
-                            <p>Total: $ <span>1000</span></p>
+                            <button id="calculate-btn" class="btn  btn-primary" name="chk">Calculate</button>
+                            <p>Player Expenses: $<span id="player-expense">0</span></p>
+                            <p>Manager: <input type="number" id="manager"></p>
+                            <p>Coach: <input type="number" id="coach"></p>
+                            <button id="total" class="btn btn-primary">Calculate</button>
+                            <p>Total: $ <span id="total-text">0</span></p>
                         </div>
                     </div>
                 </div>
@@ -149,39 +155,6 @@
 
 
 
-    <!-- 
-    <div>
-        <div class="col-4">
-
-            <div class="col-3 my-3">
-                <div class="card" style="width: 20rem; height: 350px;">
-                    <h4>Select-V</h4>
-                    <ul>
-                        <ol>
-                            <li>second item first subitem</li>
-                            <li>second item second subitem</li>
-                            <li>second item third subitem</li>
-                        </ol>
-                    </ul>
-
-                </div>
-            </div>
-
-
-            <div class="col-3 my-3">
-                <div class="card" style="width: 20rem; height: 350px;">
-                    <h4>Budget</h4>
-                    <p>Per Player: <input type="number"></p>
-                    <button class="btn btn-primary">Calculate</button>
-                    <p>Player Expenses: $ <span>5000</span></p>
-                    <p>Manager: <input type="number"></p>
-                    <p>Coach: <input type="number"></p>
-                    <button id="" class="btn btn-primary">Calculate</button>
-                    <p>Total: $ <span>1000</span></p>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
 
 
