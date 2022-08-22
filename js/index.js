@@ -1,24 +1,4 @@
 
-// click button card
-function addToCart(element) {
-    const player = element.parentNode.children[0].innerText;
-    const button = element.parentNode.children[1];
-    if (button === element) {
-        button.style.display = 'none';
-
-    }
-
-    const pd = {
-        pdName: player
-    }
-
-    cart.push(pd);
-
-    displayPlayers();
-
-
-};
-
 
 cart = [];
 
@@ -47,15 +27,47 @@ function displayPlayers() {
 
 };
 
+// click button card
+function addToCart(element) {
+    const player = element.parentNode.children[0].innerText;
+    const button = element.parentNode.children[2];
+
+    if (button === element) {
+        button.disabled = true;
+
+    }
+    const pd = {
+        pdName: player
+    }
+
+    cart.push(pd);
+
+    displayPlayers();
+
+
+};
+
 
 
 
 
 
 document.getElementById('calculate-btn').addEventListener('click', function () {
+
+
+
     const perPlayerField = document.getElementById('per-player-field');
     const playerFieldString = perPlayerField.value;
     const playerField = parseFloat(playerFieldString);
+    if (isNaN(playerField)) {
+        alert('Please provide a valid number');
+        perPlayerField.value = '';
+        return;
+    }
+
+
+
+
 
 
     //calcualtion
@@ -76,7 +88,15 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     document.getElementById('total').addEventListener('click', function () {
 
         const newManager = getMangerFieldValueById('manager');
+        if (isNaN(newManager)) {
+            alert('Please provide Manager valid number');
+            return;
+        }
         const newCoach = getMangerFieldValueById('coach');
+        if (isNaN(newCoach)) {
+            alert('Please provide Coach valid number');
+            return;
+        }
 
         //set
         const totalText = document.getElementById('total-text');

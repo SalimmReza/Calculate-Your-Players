@@ -1,6 +1,14 @@
 function getMangerFieldValueById(inputFieldId) {
-    const managerField = document.getElementById(inputFieldId);
-    const managerTextString = managerField.value;
-    const managerText = parseFloat(managerTextString);
-    return managerText;
-}
+    const budgetField = document.getElementById(inputFieldId);
+    const budgetTextString = budgetField.value;
+    const budgetText = parseFloat(budgetTextString);
+
+
+    return budgetText;
+
+};
+
+
+
+
+
