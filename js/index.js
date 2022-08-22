@@ -7,7 +7,7 @@ function displayPlayers() {
     const playersDetails = document.getElementById("players-name");
     if (cart.length <= 5) {
 
-        playersDetails.textContent = '';
+        playersDetails.innerText = '';
 
         for (let i = 0; i < cart.length; i++) {
 
