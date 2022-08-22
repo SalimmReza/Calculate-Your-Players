@@ -1,9 +1,6 @@
 
-cart = [];
-
-//player details top card
+// click button card
 function addToCart(element) {
-
     const player = element.parentNode.children[0].innerText;
     const button = element.parentNode.children[1];
     if (button === element) {
@@ -17,12 +14,17 @@ function addToCart(element) {
 
     cart.push(pd);
 
+    displayPlayers();
+
+
+};
+
+
+cart = [];
+
+//player details top card
+function displayPlayers() {
     const playersDetails = document.getElementById("players-name");
-
-
-
-
-
     if (cart.length <= 5) {
 
         playersDetails.textContent = '';
@@ -68,25 +70,20 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const expenseText = parseFloat(expenseString);
     playerExpense.innerText = totalPlayerAmount;
 
+
+
+
     document.getElementById('total').addEventListener('click', function () {
 
-        const managerField = document.getElementById('manager');
-        const managerTextString = managerField.value;
-        const managerText = parseFloat(managerTextString);
-
-
-        const coachField = document.getElementById('coach');
-        const coachTextString = coachField.value;
-        const coachText = parseFloat(coachTextString);
-
-
+        const newManager = getMangerFieldValueById('manager');
+        const newCoach = getMangerFieldValueById('coach');
 
         //set
         const totalText = document.getElementById('total-text');
         const totalTextString = totalText.innerText;
         const totaltextValue = parseFloat(totalTextString);
         //calculation 
-        totalValue = managerText + coachText + totalPlayerAmount;
+        totalValue = newManager + newCoach + totalPlayerAmount;
         totalText.innerText = totalValue;
 
 
@@ -94,6 +91,9 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
 
 });
+
+
+
 
 
 
